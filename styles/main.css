@@ -1,13 +1,20 @@
 :root {
-    --color-primary: #011993;
-    --color-secondary: #3ad8ff;
+    --color-primary-900: #011993;
+    --color-primary-800: #011ead;
+    --color-primary-700: #0122c7;
+    --color-primary-600: #0126e0;
+    --color-primary-500: #012bfa;
+    --color-primary-400: #173efe;
+    --color-primary-300: #3153fe;
+    --color-primary-200: #4b69fe;
+    --color-primary-100: #657efe;
 
-    --color-background: #243794;
+    --color-secondary: #3ad8ff;
 }
 
 html,
 body {
-    background-color: var(--color-background);
+    background-color: var(--color-primary-600);
     height: 100%;
 }
 
@@ -23,9 +30,26 @@ body {
     background-color: #fff;
 }
 
+.go-to-content--floating {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.go-to-content--floating a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
 .contact-badge--floating {
     background-color: var(--color-secondary);
     position: fixed;
     right: 10px;
     bottom: 10px;
+}
+
+.contact-badge--floating a {
+    color: var(--color-primary-900);
+    text-decoration: none;
 }
