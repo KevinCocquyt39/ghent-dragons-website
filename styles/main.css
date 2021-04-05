@@ -1,0 +1,31 @@
+:root {
+    --color-primary: #011993;
+    --color-secondary: #3ad8ff;
+
+    --color-background: #243794;
+}
+
+html,
+body {
+    background-color: var(--color-background);
+    height: 100%;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+.content-page {
+    background-color: #fff;
+}
+
+.contact-badge--floating {
+    background-color: var(--color-secondary);
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
