@@ -1,0 +1,4 @@
+{
+	"appService.defaultWebAppToDeploy": "/subscriptions/eb2da478-56f0-4b0f-9cf8-fadf3bc9b6bc/resourceGroups/GhentDragons/providers/Microsoft.Web/sites/ghent-dragons",
+	"appService.deploySubpath": "."
+}
