@@ -14,12 +14,12 @@
 
 html,
 body {
-    background-color: var(--color-primary-600);
+    background-color: var(--color-primary-900);
     height: 100%;
 }
 
 .navbar {
-    background-color: var(--color-primary-600);
+    background-color: var(--color-primary-900);
 }
 
 .navbar .navbar-toggler {
@@ -27,11 +27,11 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--color-secondary);
+    color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--color-primary-100);
+    color: var(--color-secondary);
 }
 
 .landing-page {
@@ -43,7 +43,7 @@ body {
 }
 
 .landing-page .logo-wrapper img {
-    max-width: 40%;
+    max-width: 80%;
 }
 
 .content-page-list {
