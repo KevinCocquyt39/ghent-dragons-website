@@ -42,6 +42,10 @@ body {
     color: #fff;
 }
 
+.landing-page .logo-wrapper img {
+    max-width: 40%;
+}
+
 .content-page-list {
     background-color: #fff;
 }

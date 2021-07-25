@@ -1,6 +1,6 @@
 console.log("load");
 
 $(".nav-link").on("click", function(){
-	$(".nav-link").removeClass("active");
-	$(this).toggleClass("active");
+	$(".nav-link").toggleClass("active", false);
+	$(this).toggleClass("active", true);
 });
