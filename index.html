@@ -36,21 +36,33 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-bar"
-                    aria-controls="main-nav-bar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="main-nav-bar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-bar"
+                            aria-controls="main-nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="main-nav-bar">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#over-ons">Over ons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#reglement">Reglement</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a href="mailto:info@ghentdragons.be" class="text-decoration-none" title="Mail ons"><i class="far fa-envelope fa-2x"></i></a>
+                        <a href="https://www.facebook.com/ghent.dragons" target="_blank" class="text-decoration-none" title="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com/ghent.dragons" target="_blank" class="text-decoration-none" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -63,39 +75,36 @@
 
         <div class="content-page-list">
             <section class="container content-page" id="home">
-                We zijn de hernieuwde ijshockeyclub van Gent.
+                <p>
+                    We zijn de hernieuwde ijshockeyclub van Gent.
+                </p>
             </section>
 
-            <div class="container">
-                <hr />
-            </div>
-
-            <section class="container content-page" id="about">
+            <section class="container content-page" id="over-ons">
                 <h3>Over ons</h3>
-                @kevincocquyt39
+
+                <p>
+                    @kevincocquyt39
+                </p>
             </section>
 
-            <div class="container">
-                <hr />
-            </div>
+            <section class="container content-page" id="reglement">
+                <h3>Reglement</h3>
+            </section>
 
             <section class="container content-page" id="contact">
                 <div class="row">
-                    <div class="col">
-                        <h4>Thuisbasis</h4>
+                    <h3>Contact</h3>
+
+                    <div class="col-md-6 col-xs-12">
+                        <h5>Thuisbasis</h5>
                         <p class="mb-5">
                             Ijsbaan Kristallijn<br />
                             Warmoezeniersweg 20, 9000 Gent<br />
-                            <a href="https://www.kristallijn.be/" target="_blank" class="text-decoration-none">Website</a>
-                        </p>
-
-                        <h4>Meer info?</h4>
-                        <p class="mb-5">
-                            Stuur ons een <a href="mailto:info@ghentdragons.be" class="text-decoration-none">e-mail</a> of vind ons op <a
-                                href="https://www.facebook.com/#" class="text-decoration-none">Facebook</a>
+                            <i class="fas fa-globe"></i> <a href="http://www.kristallijn.be/" target="_blank">Website</a>
                         </p>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-xs-12">
                         <div class="ratio ratio-16x9">
                             <iframe
                                 src="https://maps.google.be/?ie=UTF8&amp;t=h&amp;ll=51.02503,3.74544&amp;spn=0.00539,0.005343&amp;z=16&amp;output=embed"
