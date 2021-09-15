@@ -69,12 +69,11 @@ body {
 }
 
 .content-page a {
-    color: #000;
+    color: var(--color-primary-500);
     text-decoration: none;
 }
 
 .content-page a:hover {
-    color: var(--color-primary-500);
     text-decoration: underline;
 }
 
@@ -92,6 +91,18 @@ body {
     content: "🏒";
 }
 
+.content-page__separator--left {
+    border-left: 1px solid #ddd;
+}
+
 hr {
     color: #ccc;
+}
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+    .content-page__separator--left {
+        border-left: none;
+    }
 }
