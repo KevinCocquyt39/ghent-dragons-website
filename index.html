@@ -54,14 +54,71 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#home">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#teams">Teams</a>
+                                <li class="dropdown">
+                                    <a
+                                        href="#"
+                                        data-bs-toggle="dropdown"
+                                        role="button"
+                                        aria-haspopup="true"
+                                        aria-expanded="true"
+                                    >
+                                        <span class="nav-link">Teams</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#teams-kinderen">Kinderen</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#teams-jeugd">Jeugd</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#teams-volwassenen">Volwassenen</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#lid-worden">Lid worden</a>
+                                <li class="dropdown">
+                                    <a
+                                        href="#"
+                                        data-bs-toggle="dropdown"
+                                        role="button"
+                                        aria-haspopup="true"
+                                        aria-expanded="true"
+                                    >
+                                        <span class="nav-link">Lid worden</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#lid-worden-try-out">Try-out</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#lid-worden-inschrijven">Inschrijven</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#lid-worden-uitrusting">Uitrusting</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#onze-club">Onze club</a>
+                                <li class="dropdown">
+                                    <a
+                                        href="#"
+                                        data-bs-toggle="dropdown"
+                                        role="button"
+                                        aria-haspopup="true"
+                                        aria-expanded="true"
+                                    >
+                                        <span class="nav-link">Onze club</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#onze-club-bestuur-coaches">Bestuur & coaches</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#onze-club-thuisbasis">Thuisbasis</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#onze-club-sponsors">Sponsors</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#reglement">Reglement</a>
@@ -103,13 +160,13 @@
                 <!-- BEGIN HOME -->
                 <h1 class="display-5 fw-bold text-center mb-4">Home</h1>
 
-                <div class="lead text-align-justify">
+                <p class="lead text-align-justify">
                     Ghent Dragons is de hernieuwde ijshockeyclub van Gent. Deze club werd opgestart door een aantal
                     enthousiaste ouders en clubleden. Ijshockey is fun! We willen deze snelle, dynamische, flitsende
                     sport, die ook boeiend is om naar te kijken, toegankelijk maken voor het grote publiek. Iedereen met
                     veel, weinig of geen ijshockey ervaring is welkom in onze club om samen ijshockey te spelen. We zijn
                     een team voor iedereen!
-                </div>
+                </p>
 
                 <div class="d-flex align-items-center mt-5">
                     <img src="https://www.trooper.be/assets/images/trooper_logo.png" loading="lazy" />
@@ -123,79 +180,115 @@
                 <!-- END HOME -->
             </section>
 
+            <hr />
+
             <section class="container content-page" id="teams">
                 <!-- BEGIN TEAMS -->
                 <h1 class="display-5 fw-bold text-center mb-4">Teams</h1>
 
-                <h2 class="fw-bold mb-3">Kinderen</h2>
+                <div class="content-sub-page" id="teams-kinderen">
+                    <h2 class="fw-bold text-center mb-3">Kinderen</h2>
 
-                TODO
-
-                <h2 class="fw-bold mb-3">Jeugd</h2>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm mb-3" v-for="youthItem in youthList">
-                            <div class="card-body">
-                                <div class="card-title h3">{{ youthItem.group }}</div>
-                                <div class="card-text">Geboren tussen {{ youthItem.born }}</div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-3" v-for="kidsItem in kidsList">
+                                <div class="card-body">
+                                    <div class="card-title h3">{{ kidsItem.group }}</div>
+                                    <div class="card-text">Geboren tussen {{ kidsItem.born }}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm mb-5">
-                            <div class="card-body">
-                                <div class="card-title h3">Trainingsdagen</div>
-                                <div class="card-text">
-                                    <label class="fw-bold lead">Donderdag:</label> van 17u00 tot 18u30
-                                    <ul class="emoji-style mb-3">
-                                        <li>Jeugd op binnenring (ijshockey vaardigheden)</li>
-                                        <li>Kinderen op buitenring (powerskating)</li>
-                                    </ul>
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-5">
+                                <div class="card-body">
+                                    <div class="card-title h3">Trainingsdagen</div>
+                                    <div class="card-text">
+                                        <label class="fw-bold lead">Donderdag:</label> van 17u00 tot 18u30
+                                        <ul class="emoji-style mb-3">
+                                            <li>Op buitenring: powerskating</li>
+                                        </ul>
 
-                                    <label class="fw-bold lead">Zaterdag:</label> van 10u15 tot 11u30
-                                    <ul class="emoji-style mb-3">
-                                        <li>Kinderen op binnenring (ijshockey vaardigheden)</li>
-                                        <li>Jeugd op buitenring (powerskating)</li>
-                                    </ul>
+                                        <label class="fw-bold lead">Zaterdag:</label> van 10u15 tot 11u30
+                                        <ul class="emoji-style mb-3">
+                                            <li>Op binnenring: ijshockey vaardigheden</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h2 class="fw-bold mb-3">Volwassenen</h2>
+                <div class="content-sub-page" id="teams-jeugd">
+                    <h2 class="fw-bold text-center mb-3" id="teams-jeugd">Jeugd</h2>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-body">
-                                <div class="card-title h3">Divisie 3</div>
-                                <div class="card-text">
-                                    📆
-                                    <a href="https://www.rbihf.be/league/div3" class="fw-bold" target="_blank"
-                                        >Wedstrijd kalender</a
-                                    >
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-3" v-for="youthItem in youthList">
+                                <div class="card-body">
+                                    <div class="card-title h3">{{ youthItem.group }}</div>
+                                    <div class="card-text">Geboren tussen {{ youthItem.born }}</div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-5">
+                                <div class="card-body">
+                                    <div class="card-title h3">Trainingsdagen</div>
+                                    <div class="card-text">
+                                        <label class="fw-bold lead">Donderdag:</label> van 17u00 tot 18u30
+                                        <ul class="emoji-style mb-3">
+                                            <li>Op binnenring: ijshockey vaardigheden</li>
+                                        </ul>
 
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-body">
-                                <div class="card-title h3">Recreanten</div>
-                                <div class="card-text">
-                                    Met deze groep van enthousiaste spelers spelen we her en der wedstrijden tegen
-                                    bevriende clubs.
+                                        <label class="fw-bold lead">Zaterdag:</label> van 10u15 tot 11u30
+                                        <ul class="emoji-style mb-3">
+                                            <li>Op buitenring: powerskating</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm mb-5">
-                            <div class="card-body">
-                                <div class="card-title h3">Trainingsdagen</div>
-                                <div class="card-text">
-                                    <label class="fw-bold lead">Maandag & donderdag:</label> van 21u30 tot 23u00
+                </div>
+
+                <div class="content-sub-page" id="teams-volwassenen">
+                    <h2 class="fw-bold text-center mb-3" id="teams-volwassenen">Volwassenen</h2>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-3">
+                                <div class="card-body">
+                                    <div class="card-title h3">Competitie</div>
+                                    <div class="card-text">
+                                        Met deze groep spelen we in
+                                        <a href="https://www.rbihf.be/league/div3" target="_blank">Divisie 3</a>.
+                                        <br /><br />
+                                        📆
+                                        <a href="https://www.rbihf.be/league/div3" class="fw-bold" target="_blank"
+                                            >Wedstrijd kalender</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow-sm mb-3">
+                                <div class="card-body">
+                                    <div class="card-title h3">Recreanten</div>
+                                    <div class="card-text">
+                                        Met deze groep van enthousiaste spelers spelen we her en der wedstrijden tegen
+                                        bevriende clubs.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm mb-5">
+                                <div class="card-body">
+                                    <div class="card-title h3">Trainingsdagen</div>
+                                    <div class="card-text">
+                                        <label class="fw-bold lead">Maandag & donderdag:</label> van 21u30 tot 23u00
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -204,16 +297,18 @@
                 <!-- END TEAMS -->
             </section>
 
+            <hr />
+
             <section class="container content-page" id="lid-worden">
                 <!-- BEGIN LID WORDEN -->
                 <h1 class="display-5 fw-bold text-center mb-4">Lid worden</h1>
 
-                <div class="mb-3">
+                <div class="content-sub-page" id="lid-worden-try-out">
                     <h3>
                         Try-out&nbsp;&nbsp;
                         <span class="badge bg-danger">Gesloten voor volwassenen</span>
                     </h3>
-                    <p class="lead">
+                    <p class="lead text-align-justify">
                         Geïnteresseerd in een <b>try-out</b>? Deze zijn totaal vrijblijvend en na 3 sessies kan je
                         beslissen als je ermee verder gaat of niet. Vul hiervoor
                         <a
@@ -225,9 +320,9 @@
                     </p>
                 </div>
 
-                <div class="mb-3">
+                <div class="content-sub-page" id="lid-worden-inschrijven">
                     <h3>Inschrijven nieuwe/bestaande leden</h3>
-                    <p class="lead">
+                    <p class="lead text-align-justify">
                         Gebruik
                         <a
                             href="https://app.twizzit.com/v2/public/form/119aec95a3cecfd39bef22202266681c"
@@ -238,21 +333,109 @@
                     </p>
                 </div>
 
+                <div class="content-sub-page" id="lid-worden-uitrusting">
+                    <h3>Uitrusting</h3>
+
+                    <p class="lead text-align-justify">
+                        IJshockey is een snelle sport die op een ijsbaan wordt gespeeld. Hiervoor heb je schaatsen en
+                        een stick nodig. Het is noodzakelijk dat een goede en complete uitrusting gedragen wordt om de
+                        deelnemers voldoende te beschermen bij gebeurtenissen als "vallen op het ijs", "tegen de
+                        boarding aan komen", "rondvliegende pucks" en/of "slaande sticks".
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Zoals in het begin al aangegeven heeft een speler <b>schaatsen</b> nodig. Deze zijn speciaal
+                        voor deze sport gemaakt: ze zijn voorzien van extra versteviging als bescherming van voet en
+                        enkel. Voor goede grip op het ijs dienen de schaatsen goed (hol) geslepen te zijn zodat de
+                        speler snel kan wenden, draaien en stoppen.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        De selectie van de <b>stick</b> gebeurt op individuele basis, welke afhankelijk is van de
+                        schaatsstijl. Meestal kan men zeggen, dat als de stick correct aanvoelt, de kans groot is dat je
+                        de juiste hebt gekozen. De sticks zijn gemaakt voor een linkse of rechtse hantering. Er is een
+                        eenvoudig truukje om te weten of je een linkse of een rechtse stick nodig hebt: neem een borstel
+                        en veeg de vloer. Indien je met je linkerhand de borstelsteel lager vasthoudt dan met je
+                        rechterhand, dan heb je een linkse stick nodig. Indien je met je rechterhand de borstelsteel
+                        lager vasthoudt dan met je linkerhand, dan heb je een rechtse stick nodig.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Meestal wordt het handvat ook nog eens sterk ingetaped zodat de speler meer grip heeft op de
+                        stick. Ook het blad wordt ingetaped, opdat de puck er niet al te makkelijk vanaf zou glijden.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        De <b>helm</b> beschermt het hoofd bij een val op het ijs, en indien het een type is met
+                        aangebouwd masker, dan biedt het ook extra bescherming voor het aangezicht (aanvliegende pucks
+                        ea.). Deze moet zo passend mogelijk zijn. Het gezichtsmasker wordt vastgemaakt aan de helm, en
+                        dient om het gezicht te beschermen. Dit masker kan in 2 verschillende vormen gedragen worden:
+                        plexiglas of de metalen kooivormige bescherming.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Hockey <b>handschoenen</b> dienen strak aan te passen, indien ze te los zitten heb je minder
+                        grip op de stick. De handschoenen moeten aan de buitenkant zeer dik zijn maar aan de binnenkant
+                        niet, anders heeft men geen grip op de stick. De bedoeling van handschoenen is om de polsen en
+                        handen te beschermen.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        <b>Scheenbeen- en elleboogbeschermers</b> hebben als taak ervoor te zorgen dat je been of arm
+                        goed beschermd is bij een val op het ijs. Ook beschermen ze tegen slaande sticks en vliegende
+                        pucks. Ze zijn gemaakt van fiber en/of plastic.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        <b>Schouderbeschermers</b> worden gedragen om kwetsuren te voorkomen als gevolg van extreem
+                        krachtige schokken en/of stoten ter hoogte van de schouders en sleutelbeen. Deze bescherming
+                        moet ook passend zijn daar er anders een zekere belemmering ervaren wordt bij het schaatsen, wat
+                        een tragere speelsnelheid voor gevolg kan hebben. Heupbescherming is ingewerkt in de bovenkant
+                        van de <b>broek</b>, en geeft naast bescherming ook extra steun.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Verder zijn spelers tot 18 jaar verplicht om een <b>nekbeschermer</b> te dragen om te voorkomen
+                        dat verwondingen aan hals of nek ontstaan.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Onzichtbaar, maar zeker niet onbelangrijk, wordt de <b>schelp</b> of tock onder de kleding als
+                        bescherming van de geslachtsdelen gedragen.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        Om deze uitrusting te vervoeren is een grote <b>tas</b> nodig. Hierin bevinden zich ook nog een
+                        <b>zweetpak</b>, <b>kousen met jarretellen</b>, sticktape en eventueel reserveonderdelen om de
+                        uitrusting te repareren. Verder hebben de meeste spelers wel een tweede stick die soms in een
+                        stick-tas vervoerd wordt.
+                    </p>
+
+                    <p class="lead text-align-justify">
+                        De prijs van de uitrusting kan sterk variëren en is afhankelijk van de winkel en de
+                        verschillende merken. Startende junioren dienen rekening te houden met een prijs van om en bij
+                        €350, maar voor deze prijs heb je dan ook echt alles (schaatsen, stick, zweetpak, helm, …).
+                    </p>
+                </div>
                 <!-- END LID WORDEN -->
             </section>
+
+            <hr />
 
             <section class="container content-page" id="onze-club">
                 <!-- BEGIN ONZE CLUB -->
                 <h1 class="display-5 fw-bold text-center mb-4">Onze club</h1>
 
-                <div class="lead text-align-justify">
+                <p class="lead text-align-justify mb-4">
                     Wij zijn een gemengde groep van enthousiaste sportieve mensen met heel uiteenlopende competenties,
                     maar wat ons verbindt is de liefde en passie voor de sport en het doen slagen van de hernieuwde
                     ijshockeyclub Ghent Dragons!
+                </p>
 
-                    <div class="row my-5">
+                <div class="content-sub-page" id="onze-club-bestuur-coaches">
+                    <div class="row lead">
                         <div class="col-lg-6">
-                            <div class="card shadow-sm mb-5">
+                            <div class="card shadow-sm mb-3">
                                 <div class="card-body">
                                     <div class="card-title h3">Bestuur</div>
                                     <div class="card-text">
@@ -270,7 +453,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="card shadow-sm mb-5">
+                            <div class="card shadow-sm mb-3">
                                 <div class="card-body">
                                     <div class="card-title h3">Coaches</div>
                                     <div class="card-text">
@@ -287,33 +470,74 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <h3 class="fw-bold mb-2">Thuisbasis</h3>
-                        <div class="lead mb-5">
-                            Ijsbaan Kristallijn<br />
-                            Warmoezeniersweg 20, 9000 Gent<br />
-                            🌐 <a href="http://www.kristallijn.be/" target="_blank">Website</a>
+                <div class="content-sub-page" id="onze-club-thuisbasis">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <h3 class="fw-bold mb-2">Thuisbasis</h3>
+
+                            <p class="lead mb-5">
+                                Ijsbaan Kristallijn<br />
+                                Warmoezeniersweg 20, 9000 Gent<br />
+                                🌐 <a href="http://www.kristallijn.be/" target="_blank">Website</a><br />
+                                🛒 <a href="https://www.kristallijn.be/shop" target="_blank">Winkel</a>
+                            </p>
+
+                            <p class="lead mb-5">
+                                📮 <a href="mailto:info@ghentdragons.be">Mail ons</a> vrijblijvend voor meer informatie!
+                            </p>
                         </div>
-                        <div class="lead mb-5">
-                            📮 <a href="mailto:info@ghentdragons.be">Mail ons</a> vrijblijvend voor meer informatie!
+                        <div class="col-md-6 col-xs-12">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    src="https://maps.google.be/?ie=UTF8&amp;t=h&amp;ll=51.02503,3.74544&amp;spn=0.00539,0.005343&amp;z=16&amp;output=embed"
+                                    class="google-map"
+                                    frameborder="0"
+                                    marginwidth="0"
+                                    marginheight="0"
+                                    scrolling="no"
+                                ></iframe>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-12">
-                        <div class="ratio ratio-16x9">
-                            <iframe
-                                src="https://maps.google.be/?ie=UTF8&amp;t=h&amp;ll=51.02503,3.74544&amp;spn=0.00539,0.005343&amp;z=16&amp;output=embed"
-                                class="google-map"
-                                frameborder="0"
-                                marginwidth="0"
-                                marginheight="0"
-                                scrolling="no"
-                            ></iframe>
+                </div>
+
+                <div class="content-sub-page" id="onze-club-sponsors">
+                    <h3 class="fw-bold mb-3">Sponsors</h3>
+
+                    <p class="lead text-align-justify">Dit zijn onze zeer gewaardeerde sponsors.</p>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-2">
+                            <div class="card shadow-sm mb-3">
+                                <img
+                                    src="https://www.ittask.be/wp-content/uploads/2017/04/cropped-logo.jpg"
+                                    alt="IT Task"
+                                    class="card-image"
+                                />
+                                <div class="card-body">
+                                    <div class="card-title h3">IT Task</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <div class="card shadow-sm mb-3">
+                                <img
+                                    src="https://www.popay.be/wp-content/uploads/2019/05/logo.png"
+                                    alt="Popay"
+                                    class="card-image"
+                                    style="background-color: #4dabd8"
+                                />
+                                <div class="card-body">
+                                    <div class="card-title h3">Popay</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- END ONZE CLUB -->
             </section>
+
+            <hr />
 
             <section class="container content-page" id="reglement">
                 <!-- BEGIN REGLEMENT -->

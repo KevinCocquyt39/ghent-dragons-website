@@ -39,6 +39,15 @@ body {
     color: var(--color-secondary);
 }
 
+.navbar .dropdown > a {
+    text-decoration: none;
+}
+
+.navbar .dropdown-menu {
+    background-color: var(--color-primary-700);
+    padding: 0.5rem 1rem;
+}
+
 .social-media > a {
     color: #fff;
     padding: 0 10px;
@@ -65,34 +74,34 @@ body {
 }
 
 .content-page {
-    padding: 80px 10px;
+    padding: 50px 10px;
 }
 
-.content-page a {
+.content-sub-page {
+    padding: 60px 0px;
+}
+
+.content-sub-page a {
     color: var(--color-primary-500);
     text-decoration: none;
 }
 
-.content-page a:hover {
+.content-sub-page a:hover {
     text-decoration: underline;
 }
 
-.content-page .emoji-style {
+.content-sub-page .emoji-style {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.content-page .emoji-style li {
+.content-sub-page .emoji-style li {
     padding-left: 1rem;
 }
 
-.content-page .emoji-style li::before {
+.content-sub-page .emoji-style li::before {
     content: "🏒";
-}
-
-.content-page__separator--left {
-    border-left: 1px solid #ddd;
 }
 
 hr {

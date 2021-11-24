@@ -8,11 +8,21 @@ $(".nav-link").on("click", function () {
 var app = Vue.createApp({
     data() {
         return {
+            kidsList: [],
             youthList: [],
         };
     },
     created() {
         const self = this;
+
+        $.getJSON("/data/kids.json", function (data) {
+            for (item of data) {
+                self.kidsList.push({
+                    group: item.group,
+                    born: item.born,
+                });
+            }
+        });
 
         $.getJSON("/data/youth.json", function (data) {
             for (item of data) {
