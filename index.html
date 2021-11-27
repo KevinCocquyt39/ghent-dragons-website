@@ -191,7 +191,7 @@
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="card shadow-sm mb-3" v-for="kidsItem in kidsList">
+                            <div class="card shadow-sm mb-3" v-for="kidsItem in kidsList" :key="kidsItem.group" v-cloak>
                                 <div class="card-body">
                                     <div class="card-title h3">{{ kidsItem.group }}</div>
                                     <div class="card-text">Geboren tussen {{ kidsItem.born }}</div>
@@ -224,7 +224,12 @@
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="card shadow-sm mb-3" v-for="youthItem in youthList">
+                            <div
+                                class="card shadow-sm mb-3"
+                                v-for="youthItem in youthList"
+                                :key="youthItem.group"
+                                v-cloak
+                            >
                                 <div class="card-body">
                                     <div class="card-title h3">{{ youthItem.group }}</div>
                                     <div class="card-text">Geboren tussen {{ youthItem.born }}</div>
@@ -517,7 +522,8 @@
                                 <div class="card-body">
                                     <div class="card-title h3">IT Task</div>
                                     🌐
-                                    <a href="https://www.ittask.be/" target="_blank" class="lead stretched-link">Website</a
+                                    <a href="https://www.ittask.be/" target="_blank" class="lead stretched-link"
+                                        >Website</a
                                     ><br />
                                 </div>
                             </div>
@@ -532,7 +538,9 @@
                                 />
                                 <div class="card-body">
                                     <div class="card-title h3">Popay</div>
-                                    🌐 <a href="https://www.popay.be/" target="_blank" class="lead stretched-link">Website</a
+                                    🌐
+                                    <a href="https://www.popay.be/" target="_blank" class="lead stretched-link"
+                                        >Website</a
                                     ><br />
                                 </div>
                             </div>

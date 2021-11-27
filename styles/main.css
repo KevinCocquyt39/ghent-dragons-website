@@ -108,6 +108,10 @@ hr {
     color: #ccc;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 /* MOBILE */
 
 @media (max-width: 991px) {
