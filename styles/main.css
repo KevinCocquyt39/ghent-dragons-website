@@ -12,10 +12,12 @@
     --color-secondary: #3ad8ff;
 }
 
-html,
-body {
-    background-color: var(--color-primary-900);
+#main {
     height: 100%;
+}
+
+.bg-primary {
+    background-color: var(--color-primary-900);
 }
 
 .text-align-justify {
