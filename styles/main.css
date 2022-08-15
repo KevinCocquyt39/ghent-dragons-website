@@ -99,12 +99,9 @@
     margin: 0;
 }
 
-.content-sub-page .emoji-style li {
-    padding-left: 1rem;
-}
-
 .content-sub-page .emoji-style li::before {
     content: "🏒";
+    padding-right: 0.5rem;
 }
 
 hr {
