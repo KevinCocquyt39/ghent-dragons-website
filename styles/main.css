@@ -1,15 +1,7 @@
 :root {
-    --color-primary-900: #144350;
-    --color-primary-800: #1f6478;
-    --color-primary-700: #2986a1;
-    --color-primary-600: #34a8c9;
-    --color-primary-500: #5bbad5;
-    --color-primary-400: #acdcea;
-    --color-primary-300: #d5edf4;
-    --color-primary-200: #fdfeff;
-    --color-primary-100: #ffffff;
-
-    --color-secondary: #3ad8ff;
+    --color-dark: #065e8c;
+    --color-normal: #63a1c6;
+    --color-light: #c5d9e9;
 }
 
 #main {
@@ -17,7 +9,7 @@
 }
 
 .bg-brand {
-    background-color: var(--color-primary-900);
+    background-color: var(--color-dark);
 }
 
 .text-align-justify {
@@ -25,11 +17,11 @@
 }
 
 .navbar {
-    background-color: var(--color-primary-900);
+    background-color: var(--color-dark);
 }
 
 .navbar .navbar-toggler {
-    border: 1px solid var(--color-primary-100);
+    border: 1px solid var(--color-light);
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -38,7 +30,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--color-secondary);
+    color: var(--color-light);
 }
 
 .navbar .dropdown > a {
@@ -46,7 +38,7 @@
 }
 
 .navbar .dropdown-menu {
-    background-color: var(--color-primary-700);
+    background-color: var(--color-normal);
     padding: 0.5rem 1rem;
 }
 
@@ -85,7 +77,7 @@
 }
 
 .content-sub-page a {
-    color: var(--color-primary-500);
+    color: var(--color-normal);
     text-decoration: none;
 }
 
